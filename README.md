@@ -1,4 +1,5 @@
-# php-getting-started
+# 当番BOT
+テスト段階ですが一応動きます
 
 A barebones PHP app that makes use of the [Silex](http://silex.sensiolabs.org/) web framework, which can easily be deployed to Heroku.
 
