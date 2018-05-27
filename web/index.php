@@ -64,7 +64,7 @@ for($i=0;$i!=count($itemNums);$i++){
 
 
 for($i=0;$i!=count($itemNums);$i++) {
-    $toubanTable[$i]->firstW
+    $toubanTable[$i]->firstW;
 }
 
 function getMID($iID){
