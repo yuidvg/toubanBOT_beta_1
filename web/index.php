@@ -70,18 +70,15 @@ $perWhat = [WEEK, WEEK, WEEK];
 
 for($i = 0; $i != count($itemNums); $i++){
     $toubanTable[$i] = new toubanTable($itemNums[$i],$memberNums[$i],$rotateNums[$i],$perWhat[$i],unixtojd());
+    $toubanTable[$i]->output;
 }
 
-
-for($i = 0; $i != count($itemNums); $i++) {
-    $toubanTable[$i] -> firstW;
-}
 
 
 $from = new SendGrid\Email(null, 'nisshi.yui79@gmail.com');
 $subject = "当番のお知らせ";
 $to = new SendGrid\Email(null, "nisshi.yui79@gmail.com");
-$content = new SendGrid\Content("text/plain", "Hello, Email!");
+$content = new SendGrid\Content("text/plain", "$toubanNotfication");
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('SENDGRID_API_KEY');
