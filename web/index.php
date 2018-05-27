@@ -2,7 +2,7 @@
 
 require('../vendor/autoload.php');
 
-$app = new Silex\Application();
+/*$app = new Silex\Application();
 $app['debug'] = true;
 
 // Register the monolog logging service
@@ -13,7 +13,7 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
 // Register view rendering
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
-));
+));*/
 
 // Our web handlers
 
@@ -23,3 +23,9 @@ $app->get('/', function() use($app) {
 });
 
 $app->run();
+
+echo 'hello';
+
+$itemNum = [1, 3, 5] ;
+$memberNum = [3, 5, 5] ;
+
