@@ -75,6 +75,23 @@ for($i = 0; $i != count($itemNums); $i++){
 
 
 
+$post_data = array(
+    'value1' => $toubanNotfication
+
+);
+//IFTTT
+$url = "https://maker.ifttt.com/trigger/toubanbot1/with/key/rBrhvXD3WeFcdEEwJl6ht";
+$ch = curl_init();
+
+curl_setopt($ch,CURLOPT_POST, true);
+
+//データの配列を設定する
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post_data));
+
+curl_exec($ch);
+
+
+
 $from = new SendGrid\Email(null, 'nisshi.yui79@gmail.com');
 $subject = "当番のお知らせ";
 $to = new SendGrid\Email(null, "nisshi.yui79@gmail.com");
