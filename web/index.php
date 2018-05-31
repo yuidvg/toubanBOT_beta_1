@@ -83,13 +83,14 @@ $post_data = array(
 $url = "https://maker.ifttt.com/trigger/toubanbot1/with/key/rBrhvXD3WeFcdEEwJl6ht";
 $ch = curl_init();
 
+curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch,CURLOPT_POST, true);
 
 //データの配列を設定する
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post_data));
 
 curl_exec($ch);
-
+curl_close($ch);
 
 
 $from = new SendGrid\Email(null, 'nisshi.yui79@gmail.com');
