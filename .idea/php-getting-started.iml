@@ -4,8 +4,6 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/heroku/heroku-buildpack-php" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/sendgrid/php-http-client" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/sendgrid/sendgrid" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

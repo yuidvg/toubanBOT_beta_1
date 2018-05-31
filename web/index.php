@@ -81,7 +81,7 @@ $post_data = array(
     "value3" => "rr"
 );
 //IFTTT
-$url = "https://maker.ifttt.com/trigger/toubanbot1/with/key/rBrhvXD3WeFcdEEwJl6ht";
+/*$url = "https://maker.ifttt.com/trigger/toubanbot1/with/key/rBrhvXD3WeFcdEEwJl6ht";*/
 $ch = curl_init('https://maker.ifttt.com/trigger/toubanbot1/with/key/rBrhvXD3WeFcdEEwJl6ht');
 
 /*curl_setopt($ch, CURLOPT_URL, $url);*/
@@ -94,7 +94,7 @@ curl_exec($ch);
 curl_close($ch);
 
 
-$from = new SendGrid\Email(null, 'nisshi.yui79@gmail.com');
+/*$from = new SendGrid\Email(null, 'nisshi.yui79@gmail.com');
 $subject = "当番のお知らせ";
 $to = new SendGrid\Email(null, "nisshi.yui79@gmail.com");
 $content = new SendGrid\Content("text/plain", "$toubanNotfication");
@@ -106,4 +106,4 @@ $sg = new \SendGrid($apiKey);
 $response = $sg->client->mail()->send()->post($mail);
 echo $response->statusCode();
 echo $response->headers();
-echo $response->body();
+echo $response->body();*/
