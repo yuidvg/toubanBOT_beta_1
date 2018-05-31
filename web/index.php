@@ -76,8 +76,9 @@ for($i = 0; $i != count($itemNums); $i++){
 
 
 $post_data = array(
-    'value1' => $toubanNotfication
-
+    'value1' => "$toubanNotfication",
+    'value2' => "ww",
+    'value3' => "rr"
 );
 //IFTTT
 $url = "https://maker.ifttt.com/trigger/toubanbot1/with/key/rBrhvXD3WeFcdEEwJl6ht";
