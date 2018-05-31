@@ -82,9 +82,9 @@ $post_data = array(
 );
 //IFTTT
 $url = "https://maker.ifttt.com/trigger/toubanbot1/with/key/rBrhvXD3WeFcdEEwJl6ht";
-$ch = curl_init();
+$ch = curl_init('https://maker.ifttt.com/trigger/toubanbot1/with/key/rBrhvXD3WeFcdEEwJl6ht');
 
-curl_setopt($ch, CURLOPT_URL, $url);
+/*curl_setopt($ch, CURLOPT_URL, $url);*/
 curl_setopt($ch,CURLOPT_POST, true);
 
 //データの配列を設定する
