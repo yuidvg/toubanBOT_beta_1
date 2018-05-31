@@ -3,7 +3,7 @@
 require('../vendor/autoload.php');
 
 
-const DAY = 1;
+/*const DAY = 1;
 const WEEK = 7;
 
 $mJD= floor(unixtojd() - 2400000.5);
@@ -50,7 +50,7 @@ $perWhat = [WEEK, WEEK, WEEK];
 for($i = 0; $i != count($itemNums); $i++){
     $toubanTable[$i] = new toubanTable($itemNums[$i],$memberNums[$i],$rotateNums[$i],$perWhat[$i],unixtojd());
     $toubanTable[$i]->output;
-}
+}*/
 
 
 
