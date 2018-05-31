@@ -2,7 +2,7 @@
 
 require('../vendor/autoload.php');
 
-$app = new Silex\Application();
+/*$app = new Silex\Application();
 $app['debug'] = true;
 
 // Register the monolog logging service
@@ -22,7 +22,7 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->run();
+$app->run();*/
 
 const DAY = 1;
 const WEEK = 7;
