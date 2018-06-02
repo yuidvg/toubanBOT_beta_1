@@ -40,6 +40,20 @@ class toubanTable{
         }
     }
 }
+
+function time_diff($time_from, $time_to)
+{
+    // 日時差を秒数で取得
+    $dif = $time_to - $time_from;
+    // 時間単位の差
+    $dif_time = date("H:i:s", $dif);
+    // 日付単位の差
+    $dif_days = (strtotime(date("Y-m-d", $dif)) - strtotime("1970-01-01")) / 86400;
+    return "{$dif_days}days {$dif_time}";
+}
+
+
+
 $itemNums = [1, 3, 5];
 $memberNums = [3, 2, 5];
 $rotateNums = [1, 2, 3];
@@ -48,15 +62,15 @@ $perWhat = [WEEK, WEEK, WEEK];
 
 
 for($i = 0; $i != count($itemNums); $i++){
-    $toubanTable[$i] = new toubanTable($itemNums[$i],$memberNums[$i],$rotateNums[$i],$perWhat[$i],unixtojd());
+    $toubanTable[$i] = new toubanTable($itemNums[$i],$memberNums[$i],$rotateNums[$i],$perWhat[$i],cal_to_jd(CAL_GREGORIAN,date('n'),date(),date('Y')));
     $toubanTable[$i]->output;
 }
 
 
 
 $post_data = array(
-    "value1" => "aa",
-    "value2" => "ww",
+    "value1" => "$toubanNotfication",
+    "value2" => "waaaa",
     "value3" => "rr"
 );
 //IFTTT
