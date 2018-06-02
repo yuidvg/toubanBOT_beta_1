@@ -6,7 +6,7 @@ require('../vendor/autoload.php');
 const DAY = 1;
 const WEEK = 7;
 
-$mJD= floor(unixtojd() - 2400000.5);
+$mJD= floor(cal_to_jd(CAL_GREGORIAN,date('n'),date(),date('Y')) - 2400000.5);
 $cW = floor(($mJD+3)/7);
 $toubanNotfication = '今日の掃除は'."\n";
 
