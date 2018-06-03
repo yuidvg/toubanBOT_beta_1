@@ -2,12 +2,30 @@
 
 require('../vendor/autoload.php');
 
+use Carbon\Carbon;
 
+$dt = new Carbon();
 const DAY = 1;
 const WEEK = 7;
 
-$mJD= floor(cal_to_jd(CAL_GREGORIAN,date('n'),date(),date('Y')) - 2400000.5);
-$cW = floor(($mJD+3)/7);
+function getMJD() {
+        $D = $dt->day;//日
+        $M = $dt->month + 1;//月
+        $Y = $dt->year;//年
+
+        if ($M == 1 || $M == 2) {
+            $Y = $Y - 1;
+            $M = $M + 12;
+        }
+        $A = ($Y / 100);
+        $B = 2 - $A + ($A / 4);
+        $JD = (365.25 * ($Y + 4716)) + (30.6001 * ($M + 1)) + $D + $B - 1524.5;
+        $jD = floor($JD - 2400000.5);
+
+        return $jD;
+}
+
+$cW = floor((getMJD()+3)/7);
 $toubanNotfication = '今日の掃除は'."\n";
 
 
@@ -62,7 +80,7 @@ $perWhat = [WEEK, WEEK, WEEK];
 
 
 for($i = 0; $i != count($itemNums); $i++){
-    $toubanTable[$i] = new toubanTable($itemNums[$i],$memberNums[$i],$rotateNums[$i],$perWhat[$i],cal_to_jd(CAL_GREGORIAN,date('n'),date(),date('Y')));
+    $toubanTable[$i] = new toubanTable($itemNums[$i],$memberNums[$i],$rotateNums[$i],$perWhat[$i],getMJD());
     $toubanTable[$i]->output;
 }
 
