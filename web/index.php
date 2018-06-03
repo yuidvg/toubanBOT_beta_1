@@ -9,6 +9,7 @@ const DAY = 1;
 const WEEK = 7;
 
 function getMJD() {
+        global $dt;
         $D = $dt->day;//日
         $M = $dt->month + 1;//月
         $Y = $dt->year;//年
@@ -81,7 +82,7 @@ $perWhat = [WEEK, WEEK, WEEK];
 
 for($i = 0; $i != count($itemNums); $i++){
     $toubanTable[$i] = new toubanTable($itemNums[$i],$memberNums[$i],$rotateNums[$i],$perWhat[$i],getMJD());
-    $toubanTable[$i]->output;
+    $toubanTable[$i]->output();
 }
 
 
