@@ -50,7 +50,9 @@ class toubanTable{
 
     function getMID($iID){
         $this->rotation = $GLOBALS['cW'] - $this->firstW;
-        return ($iID - gmp_mod($this->rotation * $this->rotateNum, max($this->memberNum,$this->itemNum)));
+        $buffer =  (max($this->memberNum,$this->itemNum)%($this->rotation * $this->rotateNum));
+        if($buffer < 0)$buffer + ($this->rotation * $this->rotateNum);
+        return $iID - $buffer;
     }
 
     function output(){
