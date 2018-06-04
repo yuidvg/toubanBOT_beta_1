@@ -91,7 +91,7 @@ for($i = 0; $i != count($itemNums); $i++){
 
 $post_data = array(
     "value1" => "$toubanNotfication",
-    "value2" => "getMJD",
+    "value2" => getMJD(),
     "value3" => "rr"
 );
 //IFTTT
