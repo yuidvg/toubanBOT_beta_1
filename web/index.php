@@ -57,7 +57,7 @@ class toubanTable{
 
     function output(){
         for($i = 1; $i <= $this -> itemNum; $i++){
-            if($this->getMID($i) != 0 && $this->getMID($i) <= $this->memberNum) $GLOBALS['toubanNotfication'] .= "$i".'番目の役割は'.getMID($i).'さんが当番です'."\n";
+            if($this->getMID($i) != 0 && $this->getMID($i) <= $this->memberNum) $GLOBALS['toubanNotfication'] .= "$i".'番目の役割は'.$this->getMID($i).'さんが当番です'."\n";
         }
     }
 }
