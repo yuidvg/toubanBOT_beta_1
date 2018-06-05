@@ -20,7 +20,7 @@ function getMJD() {
         }
         $A = floor($Y / 100);
         $B = 2 - $A + floor($A / 4);
-        $JD = floor(365.25 * ($Y + 4716)) + floor(30.6001 * ($M + 1)) + $D + $B - 1524.5;
+        $JD = floor(365.25 * $Y) + floor(30.6001 * ($M + 1)) + $D + $B - 1720994.5;
         $jD = floor($JD - 2400000.5);
 
         return $jD;
