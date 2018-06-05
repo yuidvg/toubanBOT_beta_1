@@ -13,23 +13,17 @@ function getMJD() {
         $D = $dt->day;//日
         $M = $dt->month;//月
         $Y = $dt->year;//年
-        var_dump($Y);
-        var_dump($M);
-        var_dump($D);
 
         if ($M == 1 || $M == 2) {
             $Y = $Y - 1;
             $M = $M + 12;
         }
         $A = floor($Y / 100);
-        var_dump($A);
         $B = 2 - $A + floor($A / 4);
-        var_dump($B);
+
         $JD = floor(365.25 * $Y) + floor(30.6001 * ($M + 1)) + $D + $B + 1720994.5;
-        var_dump($JD);
         $jD = floor($JD - 2400000.5);
 
-        var_dump($jD);
         return $jD;
 }
 
