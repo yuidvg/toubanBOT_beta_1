@@ -12,11 +12,11 @@ function getMJD() {
         global $dt;
         $D = $dt->day;//日
         $M = $dt->month;//月
-        $Y = $dt->year;//年
+        var_dump($Y = $dt->year);//年
 
         if ($M == 1 || $M == 2) {
             $Y = $Y - 1;
-            $M = $M + 12;
+            echo $M = $M + 12;
         }
         $A = floor($Y / 100);
         $B = 2 - $A + floor($A / 4);
