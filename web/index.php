@@ -19,7 +19,7 @@ function getMJD() {
 
         if ($M == 1 || $M == 2) {
             $Y = $Y - 1;
-            echo $M = $M + 12;
+            $M = $M + 12;
         }
         $A = floor($Y / 100);
         var_dump($A);
