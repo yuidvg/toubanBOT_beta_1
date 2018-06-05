@@ -26,6 +26,7 @@ function getMJD() {
         $B = 2 - $A + floor($A / 4);
         var_dump($B);
         $JD = floor(365.25 * $Y) + floor(30.6001 * ($M + 1)) + $D + $B - 1720994.5;
+        var_dump($JD);
         $jD = floor($JD - 2400000.5);
 
         var_dump($jD);
