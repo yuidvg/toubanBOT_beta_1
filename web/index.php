@@ -11,7 +11,7 @@ const WEEK = 7;
 function getMJD() {
         global $dt;
         $D = $dt->day;//日
-        $M = $dt->month + 1;//月
+        $M = $dt->month;//月
         $Y = $dt->year;//年
 
         if ($M == 1 || $M == 2) {
